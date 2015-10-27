@@ -12,9 +12,9 @@ class Math
     /**
      * @param float $x
      *
-     * @return float
-     *
      * @throws \Exception
+     *
+     * @return float
      */
     public static function inverse($x)
     {

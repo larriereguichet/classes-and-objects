@@ -9,7 +9,7 @@ use ObjectInterfaces\Dummy\Penguin;
 $birds = [
     new Penguin(),
     new Duck(),
-    new Eagle()
+    new Eagle(),
 ];
 
 foreach ($birds as $bird) {

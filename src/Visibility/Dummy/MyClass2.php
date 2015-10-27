@@ -14,7 +14,7 @@ class MyClass2 extends MyClass
      */
     protected $protected = 'Protected2';
 
-    function printHello()
+    public function printHello()
     {
         echo $this->public;
         echo $this->protected;
@@ -24,7 +24,7 @@ class MyClass2 extends MyClass
     /**
      * This is public.
      */
-    function foo2()
+    public function foo2()
     {
         $this->MyPublic();
         $this->MyProtected();

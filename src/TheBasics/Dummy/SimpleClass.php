@@ -19,12 +19,12 @@ class SimpleClass
      *
      * @return string
      */
-    function getVar()
+    public function getVar()
     {
         return $this->var;
     }
 
-    function foo()
+    public function foo()
     {
         if (isset($this)) {
             echo '$this is defined (';

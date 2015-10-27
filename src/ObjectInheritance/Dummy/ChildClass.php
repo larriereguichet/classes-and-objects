@@ -9,6 +9,6 @@ class ChildClass extends ParentClass
 {
     public function printItem($string)
     {
-        echo 'Child: ' . $string.PHP_EOL;
+        echo 'Child: ' . $string . PHP_EOL;
     }
 }

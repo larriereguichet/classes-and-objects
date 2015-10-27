@@ -20,6 +20,6 @@ abstract class AbstractClass
     // Common method
     public function printOut()
     {
-        print $this->getValue()."\n";
+        print $this->getValue() . "\n";
     }
 }

@@ -51,7 +51,7 @@ class MyClass
     /**
      * This is public.
      */
-    function foo()
+    public function foo()
     {
         $this->MyPublic();
         $this->MyProtected();
@@ -61,7 +61,7 @@ class MyClass
     /**
      * This is public.
      */
-    function printHello()
+    public function printHello()
     {
         echo $this->public;
         echo $this->protected;

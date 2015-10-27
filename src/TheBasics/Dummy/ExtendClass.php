@@ -10,7 +10,7 @@ class ExtendClass extends SimpleClass
     /**
      * Redefine the parent method.
      */
-    function getVar()
+    public function getVar()
     {
         echo "Extending class\n";
 

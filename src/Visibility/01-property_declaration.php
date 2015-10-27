@@ -14,3 +14,4 @@ echo $obj2->public; // Works
 echo $obj2->protected; // Fatal Error
 echo $obj2->private; // Undefined
 $obj2->printHello(); // Shows Public, Protected2, Undefined
+

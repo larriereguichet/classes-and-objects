@@ -3,10 +3,6 @@
 use TheBasics\Dummy\A;
 use TheBasics\Dummy\B;
 
-/**
- * Usage of the this keyword.
- */
-
 $a = new A();
 $a->foo();
 

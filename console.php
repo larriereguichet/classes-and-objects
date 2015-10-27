@@ -4,18 +4,20 @@
 require __DIR__ . '/vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
-use Symfony\Component\Finder\Finder;
 use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Finder\Finder;
 use Symfony\Component\Finder\SplFileInfo;
 
-function dashize($word) {
-    return strtolower(preg_replace('~(?<=\\w)([A-Z])~', '-$1', $word));
-}
+/**
+ * @param SplFileInfo $file
+ *
+ * @return array
+ */
+function extractCommandInfosFromFile(SplFileInfo $file)
+{
+    preg_match('/([0-9]{2})-(.*).php/', $file->getFileName(), $parts);
 
-function extractFilenameParts($filename) {
-    preg_match('/([0-9]{2})-(.*).php/', $filename, $parts);
-
-    $parts[1] = strtolower(preg_replace('~(?<=\\w)([A-Z])~', '-$1', $parts[1]));
+    $parts[0] = strtolower(preg_replace('~(?<=\\w)([A-Z])~', '-$1', $file->getRelativePath()));
     $parts[2] = ucfirst(str_replace('_', ' ', $parts[2]));
 
     return $parts;
@@ -23,17 +25,17 @@ function extractFilenameParts($filename) {
 
 $application = new Application();
 $finder      = new Finder();
-$finder->files()->in(__DIR__.'/src')->depth('< 2')->name('*.php');
+$finder->files()->in(__DIR__ . '/src')->depth('< 2')->name('*.php');
 
 /** @var SplFileInfo $file */
 foreach ($finder as $file) {
-    $filenameParts = extractFilenameParts($file->getFileName());
+    list($namespace, $name, $description) = extractCommandInfosFromFile($file);
 
-    $command = new Command(dashize($file->getRelativePath()) . ':' . $filenameParts[1]);
+    $command = new Command($namespace . ':' . $name);
     $command->setCode(function ($input, $output) use ($file) {
         require $file->getPathname();
     });
-    $command->setDescription($filenameParts[2]);
+    $command->setDescription($description);
 
     $application->add($command);
 }

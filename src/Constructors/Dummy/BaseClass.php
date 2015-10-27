@@ -7,7 +7,7 @@ namespace Constructors\Dummy;
  */
 class BaseClass
 {
-    function __construct()
+    public function __construct()
     {
         print "In BaseClass constructor\n";
     }

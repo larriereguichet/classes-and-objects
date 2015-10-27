@@ -11,7 +11,7 @@ class ConcreteClass2 extends AbstractClass
 {
     public function getValue()
     {
-        return "ConcreteClass2";
+        return 'ConcreteClass2';
     }
 
     public function prefixValue($prefix)
@@ -26,12 +26,12 @@ class ConcreteClass2 extends AbstractClass
      */
     public function prefixName($name)
     {
-        if ($name == "Pacman") {
-            $prefix = "Mr";
-        } elseif ($name == "Pacwoman") {
-            $prefix = "Mrs";
+        if ($name == 'Pacman') {
+            $prefix = 'Mr';
+        } elseif ($name == 'Pacwoman') {
+            $prefix = 'Mrs';
         } else {
-            $prefix = "";
+            $prefix = '';
         }
 
         return "{$prefix}{$name}";

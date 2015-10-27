@@ -8,7 +8,7 @@ namespace Constructors\Dummy;
 class Plant
 {
     /**
-     * The name of the plant
+     * The name of the plant.
      *
      * @var string
      */

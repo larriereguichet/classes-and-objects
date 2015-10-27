@@ -1,13 +1,9 @@
 <?php
 
 use Constructors\Dummy\BaseClass;
-use Constructors\Dummy\SubClass;
 use Constructors\Dummy\OtherSubClass;
 use Constructors\Dummy\Plant;
-
-/**
- * Constructors usages.
- */
+use Constructors\Dummy\SubClass;
 
 // In BaseClass constructor
 $obj = new BaseClass();

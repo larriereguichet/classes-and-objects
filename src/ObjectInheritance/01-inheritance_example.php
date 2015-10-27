@@ -9,3 +9,4 @@ $parent->printItem('baz'); // Output: 'Parent: baz'
 $parent->printPHP();       // Output: 'PHP is great'
 $child->printItem('baz'); // Output: 'Child: baz'
 $child->printPHP();       // Output: 'PHP is great'
+

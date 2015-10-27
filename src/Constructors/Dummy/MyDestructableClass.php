@@ -7,14 +7,14 @@ namespace Constructors\Dummy;
  */
 class MyDestructableClass
 {
-    function __construct()
+    public function __construct()
     {
         print "In constructor\n";
-        $this->name = "MyDestructableClass";
+        $this->name = 'MyDestructableClass';
     }
 
-    function __destruct()
+    public function __destruct()
     {
-        print "Destroying ".$this->name."\n";
+        print 'Destroying ' . $this->name . "\n";
     }
 }

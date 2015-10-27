@@ -16,7 +16,7 @@ class Template implements TemplateInterface
 
     public function getHtml($template)
     {
-        foreach($this->vars as $name => $value) {
+        foreach ($this->vars as $name => $value) {
             $template = str_replace('{' . $name . '}', $value, $template);
         }
 

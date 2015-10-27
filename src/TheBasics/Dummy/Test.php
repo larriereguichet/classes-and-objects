@@ -10,8 +10,8 @@ class Test
     /**
      * @return static
      */
-    static public function getNew()
+    public static function getNew()
     {
-        return new static;
+        return new static();
     }
 }
