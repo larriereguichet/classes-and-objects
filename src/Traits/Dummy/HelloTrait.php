@@ -5,7 +5,7 @@ namespace Traits\Dummy;
 /**
  * Trait Hello.
  */
-trait Hello
+trait HelloTrait
 {
     public function sayHello()
     {

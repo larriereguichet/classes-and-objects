@@ -5,7 +5,7 @@ namespace Traits\Dummy;
 /**
  * Trait World.
  */
-trait World
+trait WorldTrait
 {
     public function sayWorld()
     {

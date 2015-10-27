@@ -7,7 +7,8 @@ namespace Traits\Dummy;
  */
 class HelloWorld
 {
-    use Hello, World;
+    use HelloTrait, WorldTrait;
+
     public function sayExclamationMark()
     {
         echo '!';
