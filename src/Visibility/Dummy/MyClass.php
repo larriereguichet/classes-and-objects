@@ -7,31 +7,60 @@ namespace Visibility\Dummy;
  */
 class MyClass
 {
+    /**
+     * @var string
+     */
     public $public = 'Public';
+    /**
+     * @var string
+     */
     protected $protected = 'Protected';
+    /**
+     * @var string
+     */
     private $private = 'Private';
 
-    // Declare a public constructor
-    public function __construct() { }
+    /**
+     * Declare a public constructor.
+     */
+    public function __construct()
+    {
+    }
 
-    // Declare a public method
-    public function MyPublic() { }
+    /**
+     * Declare a public method.
+     */
+    public function myPublic()
+    {
+    }
 
-    // Declare a protected method
-    protected function MyProtected() { }
+    /**
+     * Declare a protected method.
+     */
+    protected function myProtected()
+    {
+    }
 
-    // Declare a private method
-    private function MyPrivate() { }
+    /**
+     * Declare a private method.
+     */
+    private function myPrivate()
+    {
+    }
 
-    // this is public
-    function Foo()
+    /**
+     * This is public.
+     */
+    function foo()
     {
         $this->MyPublic();
         $this->MyProtected();
         $this->MyPrivate();
     }
 
-    // this is public
+    /**
+     * This is public.
+     */
     function printHello()
     {
         echo $this->public;

@@ -5,12 +5,15 @@ namespace TheBasics\Dummy;
 /**
  * Class ExtendClass.
  */
-class ExtendClass
+class ExtendClass extends SimpleClass
 {
-    // Redefine the parent method
-    function displayVar()
+    /**
+     * Redefine the parent method.
+     */
+    function getVar()
     {
         echo "Extending class\n";
-        parent::displayVar();
+
+        return parent::getVar();
     }
 }

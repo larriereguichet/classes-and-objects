@@ -8,28 +8,34 @@ use Symfony\Component\Finder\Finder;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Finder\SplFileInfo;
 
+function dashize($word) {
+    return strtolower(preg_replace('~(?<=\\w)([A-Z])~', '-$1', $word));
+}
+
+function extractFilenameParts($filename) {
+    preg_match('/([0-9]{2})-(.*).php/', $filename, $parts);
+
+    $parts[1] = strtolower(preg_replace('~(?<=\\w)([A-Z])~', '-$1', $parts[1]));
+    $parts[2] = ucfirst(str_replace('_', ' ', $parts[2]));
+
+    return $parts;
+}
+
 $application = new Application();
 $finder      = new Finder();
-$finder->files()->in(__DIR__ . '/src')->depth('< 2')->name('*.php');
+$finder->files()->in(__DIR__.'/src')->depth('< 2')->name('*.php');
 
 /** @var SplFileInfo $file */
 foreach ($finder as $file) {
-    $command = new Command($file->getRelativePath() . ':' . $file->getFileName());
+    $filenameParts = extractFilenameParts($file->getFileName());
+
+    $command = new Command(dashize($file->getRelativePath()) . ':' . $filenameParts[1]);
     $command->setCode(function ($input, $output) use ($file) {
-        $raw = require $file->getPathname();
-
-        $output->writeln($raw);
+        require $file->getPathname();
     });
-
-    foreach( token_get_all($file->getContents()) as $token ) {
-        if ($token[0] == T_DOC_COMMENT) {
-            $command->setDescription($token[1]);
-            break;
-        }
-    }
+    $command->setDescription($filenameParts[2]);
 
     $application->add($command);
 }
 
 $application->run();
-

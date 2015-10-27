@@ -1,7 +1,5 @@
 <?php
 
-namespace Traits;
-
 use Traits\Dummy\HelloWorld;
 
 $o = new HelloWorld();

@@ -7,7 +7,11 @@ namespace Visibility\Dummy;
  */
 class MyClass2 extends MyClass
 {
-    // We can redeclare the public and protected method, but not private
+    /**
+     * We can redeclare the public and protected method, but not private.
+     *
+     * @var string
+     */
     protected $protected = 'Protected2';
 
     function printHello()
@@ -17,8 +21,10 @@ class MyClass2 extends MyClass
         echo $this->private;
     }
 
-    // This is public
-    function Foo2()
+    /**
+     * This is public.
+     */
+    function foo2()
     {
         $this->MyPublic();
         $this->MyProtected();

@@ -7,8 +7,14 @@ namespace Visibility\Dummy;
  */
 class Test
 {
+    /**
+     * @var string
+     */
     private $foo;
 
+    /**
+     * @param string $foo
+     */
     public function __construct($foo)
     {
         $this->foo = $foo;

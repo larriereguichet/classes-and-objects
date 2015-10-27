@@ -7,16 +7,19 @@ namespace Visibility\Dummy;
  */
 class Bar
 {
-    public function test() {
+    public function test()
+    {
         $this->testPrivate();
         $this->testPublic();
     }
 
-    public function testPublic() {
+    public function testPublic()
+    {
         echo "Bar::testPublic\n";
     }
 
-    private function testPrivate() {
+    private function testPrivate()
+    {
         echo "Bar::testPrivate\n";
     }
 }

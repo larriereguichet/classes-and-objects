@@ -1,3 +1,9 @@
 <?php
 
-echo \Basic\Foo::class;
+use TheBasics\Dummy\Foo;
+
+/**
+ * Class name resolution.
+ */
+
+echo Foo::class;

@@ -1,6 +1,6 @@
 <?php
 
-namespace ConstructorsAndDestructors\Dummy;
+namespace Constructors\Dummy;
 
 /**
  * Class MyDestructableClass.

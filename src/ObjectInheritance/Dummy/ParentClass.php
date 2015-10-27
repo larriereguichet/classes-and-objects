@@ -7,6 +7,9 @@ namespace ObjectInheritance\Dummy;
  */
 class ParentClass
 {
+    /**
+     * @param string $string
+     */
     public function printItem($string)
     {
         echo 'Parent: ' . $string . PHP_EOL;

@@ -1,5 +1,11 @@
 <?php
 
+use TheBasics\Dummy\Test;
+use TheBasics\Dummy\Child;
+
+/**
+ * PHP 5.3.0 introduced a couple of new ways to create instances of an object.
+ */
 
 $obj1 = new Test();
 $obj2 = new $obj1;

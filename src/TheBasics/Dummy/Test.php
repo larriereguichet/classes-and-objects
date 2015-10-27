@@ -7,9 +7,11 @@ namespace TheBasics\Dummy;
  */
 class Test
 {
+    /**
+     * @return static
+     */
     static public function getNew()
     {
         return new static;
     }
-
 }

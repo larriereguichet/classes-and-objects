@@ -7,11 +7,13 @@ namespace Visibility\Dummy;
  */
 class Foo
 {
-    public function testPublic() {
+    public function testPublic()
+    {
         echo "Foo::testPublic\n";
     }
 
-    private function testPrivate() {
+    private function testPrivate()
+    {
         echo "Foo::testPrivate\n";
     }
 }

@@ -1,7 +1,5 @@
 <?php
 
-namespace ObjectInterfaces;
-
 use ObjectInterfaces\Dummy\CanFlyInterface;
 use ObjectInterfaces\Dummy\CanSwimInterface;
 use ObjectInterfaces\Dummy\Duck;

@@ -7,12 +7,21 @@ namespace TheBasics\Dummy;
  */
 class SimpleClass
 {
-    // property declaration
-    public $var = 'a default value';
+    /**
+     * Property declaration.
+     *
+     * @var string
+     */
+    public $var = "a default value\n";
 
-    // method declaration
-    public function displayVar() {
-        echo $this->var;
+    /**
+     * Method declaration.
+     *
+     * @return string
+     */
+    function getVar()
+    {
+        return $this->var;
     }
 
     function foo()

@@ -7,9 +7,16 @@ namespace TheBasics\Dummy;
  */
 class Foo
 {
+    /**
+     * @var string
+     */
     public $bar = 'property';
 
-    public function bar() {
+    /**
+     * @return string
+     */
+    public function bar()
+    {
         return 'method';
     }
 }

@@ -1,6 +1,6 @@
 {
     "name": "larriereguichet/classes-and-objects",
-    "description": "dummy classes and objects for educational purpose",
+    "description": "Dummy PHP classes and objects for educational purpose",
     "license": "MIT",
     "autoload": {
         "psr-4": { "": "src/" }
@@ -13,6 +13,7 @@
     ],
     "require": {
         "symfony/console": "^2.7",
-        "symfony/finder": "^2.7"
+        "symfony/finder": "^2.7",
+        "domnikl/design-patterns-php": "@dev"
     }
 }

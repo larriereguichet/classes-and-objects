@@ -1,7 +1,5 @@
 <?php
 
-namespace ObjectInheritance;
-
 use ObjectInheritance\Dummy\ChildClass;
 use ObjectInheritance\Dummy\ParentClass;
 

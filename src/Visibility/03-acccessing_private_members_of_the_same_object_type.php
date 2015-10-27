@@ -1,4 +1,6 @@
 <?php
-$test = new Test('test');
 
+use Visibility\Dummy\Test;
+
+$test = new Test('test');
 $test->baz(new Test('other'));
